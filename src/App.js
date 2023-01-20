@@ -1,7 +1,7 @@
 import "./App.css";
 import {Link, Routes, Route} from 'react-router-dom';
 import Homepage from './components/Homepage';
-import TodoList from "./components/TodoList";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -31,14 +31,7 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/new-tech-list" element={<TodoList />} />
-        <Route
-          path="/jobtype/:jobId"
-          element={<TodoList />}
-        />
-      </Routes>
+      <Outlet />
     </>
   );
 }

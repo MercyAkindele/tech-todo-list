@@ -1,16 +1,24 @@
-import { useState } from "react";
-import { useParams} from "react-router-dom"
+import { useState, useEffect } from "react";
+import { useParams, useLoaderData } from "react-router-dom"
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 
 const premadeTodos = require("../preMadeTodoList.json")
 
-function TodoList(props) {
+export async function loader({ params }) {
+  const jobId = params.jobId;
+  return premadeTodos[jobId] ? premadeTodos[jobId].todos : [];
+}
+
+function TodoList() {
+  const initialTodos = useLoaderData() || [];
   const { jobId } = useParams();
 
-  const initialTodos = premadeTodos[jobId].todos
-  
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    setTodos(initialTodos);
+  }, [jobId]);
 
   const addTodo = (todo) => {
     // todo looks like { id: 123, text: "foobar" }
