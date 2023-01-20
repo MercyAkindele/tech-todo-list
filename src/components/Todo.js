@@ -16,7 +16,7 @@ function Todo({ todos, completeTodo, removeTodo, editTodo }) {
       text: "",
     });
   };
-  
+
   if (edit.id) {
     return <TodoForm edit={edit} onSubmit={submitEdit} />;
   }
@@ -24,7 +24,7 @@ function Todo({ todos, completeTodo, removeTodo, editTodo }) {
   return todos.map((todo, index) => (
     <div
       className={todo.isComplete ? "todo-row complete" : "todo-row"}
-      key={index}
+      key={todo.id}
     >
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
         {todo.text}
