@@ -1,11 +1,14 @@
 import { useState } from "react";
+import { useParams} from "react-router-dom"
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 
-function TodoList() {
-  const [todos, setTodos] = useState([]);
+function TodoList(props) {
+  
+  const [todos, setTodos] = useState(props.todos);
 
   const addTodo = (todo) => {
+    // todo looks like { id: 123, text: "foobar" }
     //ignores empty spaces
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return;
@@ -48,6 +51,7 @@ function TodoList() {
         removeTodo={removeTodo}
         editTodo={editTodo}
       />
+
       <button>Submit</button>
     </div>
   );

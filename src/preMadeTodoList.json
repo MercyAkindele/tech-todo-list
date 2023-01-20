@@ -1,0 +1,27 @@
+{
+  "fullstackEngineer": {
+    "id": "fullstackEngineer",
+    "name":"FullStack Engineer",
+    "todos":[{"id": 1, "text": "Practice DSA"}, {"id": 2, "text": "Follow up in 2 days"}]
+  },
+  "frontEndEngineer": {
+    "id": "frontEndEngineer",
+    "name":"Front End Engineer",
+    "todos":[{"id": 2, "text": "Brush up on DOM manipulation"}, {"id": 2, "text": "practice basic css styling"}]
+  },
+  "backEndEngineer": {
+    "id": "backEndEngineer",
+    "name":"Back End Engineer",
+    "todos":[{"id": 3, "text": "Learn about validation"}, {"id": 2, "text": "Brush up on SQL"}]
+  },
+  "uiUx": {
+    "id": "uiUx",
+    "name":"UI/UX",
+    "todos":[{"id": 4, "text": "text 1"}, {"id": 2, "text": "text 2"}]
+  },
+  "dataAnalyst": {
+    "id": "dataAnalyst",
+    "name":"Data Analyst",
+    "todos":[{"id": 5, "text": "text 1"}, {"id": 2, "text": "text 2"}]
+  }
+}

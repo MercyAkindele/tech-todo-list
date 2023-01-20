@@ -1,11 +1,45 @@
-import './App.css';
-import TodoList from './components/TodoList';
+import "./App.css";
+import {Link, Routes, Route} from 'react-router-dom';
+import Homepage from './components/Homepage';
+import TodoList from "./components/TodoList";
+const premadeTodos = require("./preMadeTodoList.json")
+
 function App() {
-  return (
-    <div className="App">
-      <TodoList />
-    </div>
-  );
+  return(
+  <>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Homepage</Link>
+        </li>
+        <li>
+          <Link to="/new-tech-list">Create an Interview Prep List</Link>
+        </li>
+        <li>
+          <Link to="/jobtype/:fullStackEngineer">Full Stack </Link>
+        </li>
+        <li>
+          <Link to="/jobtype/:frontEndEngineer">Front End </Link>
+        </li>
+        <li>
+          <Link to="/jobtype/:backEndEngineer">Back End</Link>
+        </li>
+        <li>
+          <Link to="/jobtype/:uiUx">UI/UX</Link>
+        </li>
+        <li>
+          <Link to="/jobtype/:dataAnalyst">Data Analyst</Link>
+        </li>
+      </ul>
+    </nav>
+    <Routes>
+      <Route path="/" element={<Homepage />}/>
+      <Route path="/new-tech-list" element={<TodoList/>}/>
+      <Route path="/jobtype/:jobId" element={<TodoList
+      todos={premadeTodos.frontEndEngineer.todos}/>}/>
+    </Routes>
+  </>
+  )
 }
 
 export default App;
