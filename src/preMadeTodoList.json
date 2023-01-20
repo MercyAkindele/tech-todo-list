@@ -1,6 +1,6 @@
 {
-  "fullstackEngineer": {
-    "id": "fullstackEngineer",
+  "fullStackEngineer": {
+    "id": "fullStackEngineer",
     "name":"FullStack Engineer",
     "todos":[{"id": 1, "text": "Practice DSA"}, {"id": 2, "text": "Follow up in 2 days"}]
   },

@@ -3,9 +3,14 @@ import { useParams} from "react-router-dom"
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 
+const premadeTodos = require("../preMadeTodoList.json")
+
 function TodoList(props) {
+  const { jobId } = useParams();
+
+  const initialTodos = premadeTodos[jobId].todos
   
-  const [todos, setTodos] = useState(props.todos);
+  const [todos, setTodos] = useState(initialTodos);
 
   const addTodo = (todo) => {
     // todo looks like { id: 123, text: "foobar" }
