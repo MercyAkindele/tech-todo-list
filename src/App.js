@@ -35,7 +35,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Homepage />}/>
       <Route path="/new-tech-list" element={<TodoList/>}/>
-      <Route path="/jobtype/:jobId" element={<TodoList
+      <Route path="/jobtype/:jobId" element={<TodoList //premade.todos.id === jobId then return premadetodos.jobId.todos
       todos={premadeTodos.frontEndEngineer.todos}/>}/>
     </Routes>
   </>
