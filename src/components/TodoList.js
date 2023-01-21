@@ -14,6 +14,9 @@ function TodoList() {
   const initialTodos = useLoaderData() || [];
   const { jobId } = useParams();
 
+  const jobName = premadeTodos[jobId] ? premadeTodos[jobId].name : null;
+  console.log(jobName);    // minor issue, this is being assigned six times after the link click
+
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
@@ -59,7 +62,7 @@ function TodoList() {
       <div className="row">        
         <div className="col col-lg-12 border-light rounded">
           <div className="border-bottom border-secondary-subtle">
-            <h3 className="py-2">-react hook here for variable job type-</h3>
+            <h3 className="py-2">{jobName}</h3>
           </div>
           <div className="border-bottom border-secondary-subtle">
             <h3 className="pt-2">Latest Job Activity</h3>
