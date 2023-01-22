@@ -11,7 +11,7 @@ export async function loader({ params }) {
 }
 
 function TodoList() {
-  const initialTodos = useLoaderData() || [];
+ 
   const { jobId } = useParams();
 
   const jobName = premadeTodos[jobId] ? premadeTodos[jobId].name : null;
@@ -59,7 +59,7 @@ function TodoList() {
 
   return (
     <div className="container">
-      <div className="row">        
+      <div className="row">
         <div className="col col-lg-12 border-light rounded">
           <div className="border-bottom border-secondary-subtle">
             <h3 className="py-2">{jobName}</h3>
