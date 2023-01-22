@@ -2,26 +2,64 @@
   "fullStackEngineer": {
     "id": "fullStackEngineer",
     "name":"FullStack Engineer",
-    "todos":[{"id": 1, "text": "Practice DSA"}, {"id": 2, "text": "Follow up in 2 days"}]
+    "todos":[
+      {"id": 1, "text": "Practice DSA"}, 
+      {"id": 2, "text": "Follow up in 2 days"},
+      {"id": 11, "text": "connect with recruiter"},
+      {"id": 12, "text": "message recruiter"},
+      {"id": 13, "text": "follow company"},
+      {"id": 14, "text": "follow up phone call / email with recruiter"}
+    ]
   },
   "frontEndEngineer": {
     "id": "frontEndEngineer",
     "name":"Front End Engineer",
-    "todos":[{"id": 3, "text": "Brush up on DOM manipulation"}, {"id": 4, "text": "practice basic css styling"}]
+    "todos":[
+      {"id": 3, "text": "Brush up on DOM manipulation"}, 
+      {"id": 4, "text": "practice basic css styling"},
+      {"id": 15, "text": "connect with recruiter"},
+      {"id": 16, "text": "message recruiter"},
+      {"id": 17, "text": "follow company"},
+      {"id": 18, "text": "follow up phone call / email with recruiter"}
+    ]
   },
   "backEndEngineer": {
     "id": "backEndEngineer",
     "name":"Back End Engineer",
-    "todos":[{"id": 5, "text": "Learn about validation"}, {"id": 6, "text": "Brush up on SQL"}]
+    "todos":[
+      {"id": 5, "text": "Learn about validation"}, 
+      {"id": 6, "text": "Brush up on SQL"},
+      {"id": 19, "text": "connect with recruiter"},
+      {"id": 20, "text": "message recruiter"},
+      {"id": 21, "text": "follow company"},
+      {"id": 22, "text": "follow up phone call / email with recruiter"}
+    ]
   },
   "uiUx": {
     "id": "uiUx",
     "name":"UI/UX",
-    "todos":[{"id": 7, "text": "uiUx text 1"}, {"id": 8, "text": "uiUx text 2"}]
+    "todos":[
+      {"id": 7, "text": "update portfolio"}, 
+      {"id": 8, "text": "update case studies"},
+      {"id": 23, "text": "brush up on knowledge of Sketch, Figma, Adobe XD, CSS, InVision"},
+      {"id": 24, "text": "update client/project presentations"},
+      {"id": 25, "text": "connect with recruiter"},
+      {"id": 26, "text": "message recruiter"},
+      {"id": 27, "text": "follow company"},
+      {"id": 28, "text": "follow up phone call / email with recruiter"}
+    ]
   },
   "dataAnalyst": {
     "id": "dataAnalyst",
     "name":"Data Analyst",
-    "todos":[{"id": 9, "text": "dataAnalyst text 1"}, {"id": 10, "text": "dataAnalyst text 2"}]
+    "todos":[
+      {"id": 9, "text": "practice SQL queries"}, 
+      {"id": 10, "text": "review data visualization with Tableau"},
+      {"id": 29, "text": "practice statistical analysis with python"},
+      {"id": 30, "text": "connect with recruiter"},
+      {"id": 31, "text": "message recruiter"},
+      {"id": 32, "text": "follow company"},
+      {"id": 33, "text": "follow up phone call / email with recruiter"}
+    ]
   }
 }
