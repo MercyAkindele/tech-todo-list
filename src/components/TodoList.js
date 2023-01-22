@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { useParams, useLoaderData } from "react-router-dom"
+
+import { useParams } from "react-router-dom"
 import TodoForm from "./TodoForm";
-import Todo from "./Todo";
+
 
 const premadeTodos = require("../preMadeTodoList.json")
 
@@ -13,13 +13,14 @@ export async function loader({ params }) {
 function TodoList() {
 
   const { jobId } = useParams();
-  
+  const jobName = premadeTodos[jobId]?premadeTodos[jobId].name:null;
+
   return (
     <div className="container">
       <div className="row">
         <div className="col col-lg-12 border-light rounded">
           <div className="border-bottom border-secondary-subtle">
-            <h3 className="py-2">Name of Job type</h3>
+            <h3 className="py-2">{jobName}</h3>
           </div>
           <div className="border-bottom border-secondary-subtle">
             <h3 className="pt-2">Latest Job Activity</h3>

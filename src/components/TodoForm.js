@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState } from "react";
-import { useParams, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import Todo from "./Todo";
 
 function TodoForm(props) {
@@ -11,8 +11,10 @@ function TodoForm(props) {
     todos: [...initialTodos],
   };
 
+
   const [formData, setFormData] = useState({ ...initialFormState });
   const [todoInput, setTodoInput] = useState("");
+
 
   useEffect(() => {
     const newFormData = {
@@ -121,9 +123,14 @@ function TodoForm(props) {
 
   function formSubmitHandler(e) {
     e.preventDefault();
-
-    console.log("formData", formData);
-    console.log("JSON.stringify(formData)", JSON.stringify(formData));
+    //stores entire form in storage
+    const allTodosListsAsString = JSON.stringify(formData);
+    localStorage.setItem("storedTodoList",allTodosListsAsString);
+    //console.log("all lists", storeTodoList);
+    //console.log("JSON.stringify(formData)", JSON.stringify(formData));
+    //set the input bars to the initial state
+    setTodoInput("")
+    setFormData(initialFormState);
   }
 
   return (
