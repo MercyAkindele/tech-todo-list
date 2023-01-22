@@ -11,11 +11,8 @@ export async function loader({ params }) {
 }
 
 function TodoList() {
- 
-  const { jobId } = useParams();
 
-  const jobName = premadeTodos[jobId] ? premadeTodos[jobId].name : null;
-  console.log(jobName);    // minor issue, this is being assigned six times after the link click
+  const { jobId } = useParams();
 
   const [todos, setTodos] = useState([]);
 
