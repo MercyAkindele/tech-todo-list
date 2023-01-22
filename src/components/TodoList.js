@@ -13,53 +13,13 @@ export async function loader({ params }) {
 function TodoList() {
 
   const { jobId } = useParams();
-
-  const [todos, setTodos] = useState([]);
-
-  useEffect(() => {
-    setTodos(initialTodos);
-  }, [jobId]);
-
-  const addTodo = (todo) => {
-    // todo looks like { id: 123, text: "foobar" }
-    //ignores empty spaces
-    if (!todo.text || /^\s*$/.test(todo.text)) {
-      return;
-    }
-    const newTodos = [todo, ...todos];
-    setTodos(newTodos);
-  };
-
-  const removeTodo = (id) => {
-    const removeArr = [...todos].filter((todo) => todo.id !== id);
-    setTodos(removeArr);
-  };
-
-  const editTodo = (id, newText) => {
-    if (!newText.text || /^\s*$/.test(newText.text)) {
-      return;
-    }
-    setTodos((original) =>
-      original.map((item) => (item.id === id ? newText : item))
-    );
-  };
-
-  const completeTodo = (id) => {
-    let updatedTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        todo.isComplete = !todo.isComplete;
-      }
-      return todo;
-    });
-    setTodos(updatedTodos);
-  };
-
+  
   return (
     <div className="container">
       <div className="row">
         <div className="col col-lg-12 border-light rounded">
           <div className="border-bottom border-secondary-subtle">
-            <h3 className="py-2">{jobName}</h3>
+            <h3 className="py-2">Name of Job type</h3>
           </div>
           <div className="border-bottom border-secondary-subtle">
             <h3 className="pt-2">Latest Job Activity</h3>
@@ -71,9 +31,9 @@ function TodoList() {
             <h3 className="pt-2">Activity checklist</h3>
             <h4 className="pt-2">LinkedIn</h4>
             <ul>
-              <li onClick={() => completeTodo()}>connect with recruiter</li>
-              <li onClick={completeTodo}>message recruiter</li>
-              <li onClick={completeTodo}>follow company</li>
+              <li ></li>
+              <li ></li>
+              <li></li>
             </ul>
           </div>
           <div>
@@ -94,15 +54,10 @@ function TodoList() {
           </div>
           <div>
             <h4>What Tech Interview Prep Needs to be Done?</h4>
-            <TodoForm onSubmit={addTodo} />
-            <Todo
-              todos={todos}
-              completeTodo={completeTodo}
-              removeTodo={removeTodo}
-              editTodo={editTodo}
-            />
+            <TodoForm jobId={jobId} />
+
           </div>
-            <button>Submit</button>
+
         </div>
       </div>
     </div>
