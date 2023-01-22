@@ -1,8 +1,6 @@
-import { useParams } from "react-router-dom";
-import TodoList from "./TodoList";
+const initialFormState = {
+  company_name: "",
+  todos:[{id: Math(Math.random()*10000), text:""}]
 
-export default function Practice() {
-  const { jobId } = useParams();
-
-  return <TodoList jobId={jobId} eventType="premade" />;
-}
+};
+const [formData, setFormData] = useState({ ...initialFormState });
