@@ -1,4 +1,4 @@
-
+import "../App.css";
 import { useParams } from "react-router-dom"
 import TodoForm from "./TodoForm";
 
@@ -18,7 +18,7 @@ function TodoList() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col col-lg-12 text-bg-light border-light p-4 rounded">
+        <div className="list-layout col col-lg-12 text-bg-light border-light p-4 rounded">
           <div className="border-bottom border-secondary-subtle">
             <h3 className="py-2">{jobName}</h3>
           </div>
@@ -30,22 +30,6 @@ function TodoList() {
           </div>
           <div>
             <h3 className="pt-2">Activity checklist</h3>
-            <h4 className="pt-2">LinkedIn</h4>
-            <ul>
-              <li ></li>
-              <li ></li>
-              <li></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="pt-2">Follow up</h4>
-            <ul>
-              <li>phone call with recruiter</li>
-              <li>email recruiter</li>
-              <li>text recruiter</li>
-            </ul>
-          </div>
-          <div>
             <h4 className="pt-2">Additional resources</h4>
             <ul>
               <li></li>
