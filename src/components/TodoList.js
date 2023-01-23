@@ -18,7 +18,7 @@ function TodoList() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col col-lg-12 border-light rounded">
+        <div className="col col-lg-12 text-bg-light border-light p-4 rounded">
           <div className="border-bottom border-secondary-subtle">
             <h3 className="py-2">{jobName}</h3>
           </div>
