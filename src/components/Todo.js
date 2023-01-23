@@ -18,18 +18,20 @@ function Todo({
   function renderNormal(todo) {
     return (
       <>
-        <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+        <div className="d-flex justify-content-between">
+        <div className="py-2" key={todo.id} onClick={() => completeTodo(todo.id)}>
           {todo.text}
         </div>
-        <div className="icons">
+        <div className="icons d-flex py-2">
           <RiCloseCircleLine
             onClick={() => removeTodo(todo.id)}
-            className="delete-icon"
+            className="delete-icon mx-5"
           />
           <TiEdit
             className="edit-icon"
             onClick={() => startEditTodo(todo.id)}
           />
+        </div>
         </div>
       </>
     );
@@ -44,6 +46,7 @@ function Todo({
   function renderEdit(todo) {
     return (
       <>
+        <div className="d-flex py-2">
         <div key={todo.id}>
           <input
             defaultValue={todo.text}
@@ -55,6 +58,7 @@ function Todo({
             onClick={() => saveEditTodo(todo.id, todoTexts[todo.id])}
             className="save-icon"
           />
+        </div>
         </div>
       </>
     );
