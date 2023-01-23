@@ -153,13 +153,13 @@ function TodoForm(props) {
             value={todoInput}
             onChange={handleChange}
             name="todo_to_add"
-            className="todo-input"
+            className="todo-input my-2 me-2"
           />
           <button className="todo-button" onClick={addTodoclickHandler}>
             Add
           </button>
         </div>
-        <button>Submit</button>
+        <button className="mb-4">Submit</button>
       </form>
       <Todo
         todos={formData.todos}

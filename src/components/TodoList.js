@@ -23,22 +23,13 @@ function TodoList() {
             <h3 className="py-2">{jobName}</h3>
           </div>
           <div className="border-bottom border-secondary-subtle">
-            <h3 className="pt-2">Latest Job Activity</h3>
-            <ul className="pb-2">
+            <h3 className="py-2">Latest Job Activity</h3>
+            <ul>
               <li>Application submitted</li>
             </ul>
           </div>
           <div>
-            <h3 className="pt-2">Activity checklist</h3>
-            <h4 className="pt-2">Additional resources</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-          <div>
-            <h4>What Tech Interview Prep Needs to be Done?</h4>
+            <h4 className="py-2">What Tech Interview Prep Needs to be Done?</h4>
             <TodoForm jobId={jobId} />
 
           </div>
